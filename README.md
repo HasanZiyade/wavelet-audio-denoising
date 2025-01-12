@@ -38,8 +38,8 @@ A Python application for wavelet-based audio denoising through an interactive gr
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd <repository-folder>
+   git clone https://github.com/HasanZiyade/wavelet-audio-denoising
+   cd wavelet-audio-denoising
    ```
 
 2. Install required packages:
