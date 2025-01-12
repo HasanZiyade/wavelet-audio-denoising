@@ -1,7 +1,7 @@
 
 # Audio Denoising Application
 
-A Python application for wavelet-based audio denoising through an interactive graphical user interface. This tool enables users to load audio files, apply various denoising algorithms, and evaluate the results using multiple speech quality metrics.
+A Python application for wavelet-based audio denoising through an interactive graphical user interface. This tool enables users to load audio files, apply various denoising algorithms, and evaluate the results using multiple speech quality metrics. The denoising will be made using Python and mainly utilizing the ‘pywt’ library which is a free Open Source library for wavelet transforms in Python.
 
 ---
 
@@ -34,6 +34,23 @@ A Python application for wavelet-based audio denoising through an interactive gr
 
 ---
 
+## Main Algorithm
+The main algorithm follows simple steps of signal denoising: 
+### Preprocessing
+- The audio file is turned it into a numpy array.
+- Signal is normalized between -1 and 1.
+- Simulated white gaussian noise added to the signal.
+### Decomposition
+- The decomposition will be made based on selected wavelet type and decomposition level.
+- Detail and approximation coefficients are returned for each level.
+### Thresholding
+- Soft thresholding is applied to all signals 
+- The detail coefficients will be thresholded using the selected method.
+### Recomposition
+- The signal will be recomposed using pywt functions
+- Parameters for the recomposition are the same as the decomposition function 
+
+---
 ## Installation
 
 1. Clone the repository:
