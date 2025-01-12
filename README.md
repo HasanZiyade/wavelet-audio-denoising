@@ -118,30 +118,6 @@ The application's denoising effectiveness depends on:
 
 ---
 
-## Testing
-
-The project includes automated testing capabilities through `automated_test.py`, which can:
-
-- Test different wavelet types
-- Compare threshold methods
-- Analyze decomposition levels
-- Generate comprehensive metrics reports
-
-Results of performance analysis are stored in the `results` directory:
-
-- Wavelet comparison metrics
-- Threshold method analysis
-- Decomposition level impact
-- Combined performance metrics
-
----
-
-## License
-
-This project is open-source and available under the MIT License.
-
----
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for any improvements or new features.
