@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+*.wav
+!examples/audio/*.wav
+.env
+venv/
+.vs/
+.idea/
