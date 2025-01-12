@@ -83,7 +83,6 @@ Run the application:
 
 - `main.py`: GUI implementation and application entry point.
 - `denoising.py`: Core denoising algorithms and signal processing.
-- `automated_test.py`: Automated testing functionality.
 - `requirements.txt`: Required Python packages.
 
 ---
