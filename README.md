@@ -49,7 +49,7 @@ A Python application for wavelet-based audio denoising through an interactive gr
 
 3. Install `speechmetrics` separately:
    ```bash
-   pip install speechmetrics
+   pip install git+https://github.com/aliutkus/speechmetrics#egg=speechmetrics
    ```
 
 ### Additional Requirements
