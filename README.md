@@ -1,7 +1,11 @@
 
 # Audio Denoising Application
 
-A Python application for wavelet-based audio denoising through an interactive graphical user interface. This tool enables users to load audio files, apply various denoising algorithms, and evaluate the results using multiple speech quality metrics. The denoising will be made using Python and mainly utilizing the ‘pywt’ library which is a free Open Source library for wavelet transforms in Python.
+A Python application for wavelet-based audio denoising through an interactive graphical user interface. This tool enables users to load audio files, apply various denoising algorithms, and evaluate the results using multiple speech quality metrics. The denoising will be made using Python and mainly utilizing the [‘pywt’ library](https://github.com/PyWavelets/pywt), which is a free Open Source library for wavelet transforms in Python. Additionally, the [Speechmetrics library](https://github.com/aliutkus/speechmetrics) will be utilized for evaluating the results using comprehensive speech quality metrics. Special thanks to Aliutkus for his work on this library, which will be a crucial part of this project. The thresholding methods algorithms are based on the following research:
+
+1. ["Performance analysis of wavelet thresholding methods in denoising of audio signals of some Indian Musical Instruments"](https://www.researchgate.net/publication/268200760_Performance_analysis_of_wavelet_thresholding_methods_in_denoising_of_audio_signals_of_some_Indian_Musical_Instruments) by A.K. Verma.
+2. Donoho, D. L., & Johnstone, I. M. (1994). [Ideal spatial adaptation by wavelet shrinkage](https://doi.org/10.1093/biomet/81.3.425). *Biometrika, 81*(3), 425–455.
+3. Wang, G.-Y., Zhao, X.-Q., & Wang, X. (2009). [Speech enhancement based on the combination of spectral subtraction and wavelet thresholding](https://doi.org/10.1109/ICACIA.2009.5361134). In 2009 International Conference on Apperceiving Computing and Intelligence Analysis (pp. 136–139). IEEE.
 
 ---
 
@@ -35,22 +39,27 @@ A Python application for wavelet-based audio denoising through an interactive gr
 ---
 
 ## Main Algorithm
-The main algorithm follows simple steps of signal denoising: 
+The main algorithm follows simple steps of signal denoising:
+
 ### Preprocessing
-- The audio file is turned it into a numpy array.
+- The audio file is turned into a numpy array.
 - Signal is normalized between -1 and 1.
 - Simulated white gaussian noise added to the signal.
+
 ### Decomposition
-- The decomposition will be made based on selected wavelet type and decomposition level.
+- The decomposition will be made based on the selected wavelet type and decomposition level.
 - Detail and approximation coefficients are returned for each level.
+
 ### Thresholding
-- Soft thresholding is applied to all signals 
+- Soft thresholding is applied to all signals.
 - The detail coefficients will be thresholded using the selected method.
+
 ### Recomposition
-- The signal will be recomposed using pywt functions
-- Parameters for the recomposition are the same as the decomposition function 
+- The signal will be recomposed using pywt functions.
+- Parameters for the recomposition are the same as the decomposition function.
 
 ---
+
 ## Installation
 
 1. Clone the repository:
@@ -109,10 +118,10 @@ Run the application:
 - NumPy: Numerical computing
 - SciPy: Scientific computing
 - Matplotlib: Plotting
-- PyWavelets: Wavelet transforms
+- [PyWavelets](https://github.com/PyWavelets/pywt): Wavelet transforms
 - Sounddevice: Audio playback
 - Tkinter: GUI framework
-- Speechmetrics: Audio quality metrics
+- [Speechmetrics](https://github.com/aliutkus/speechmetrics): Audio quality metrics
 - Scikit-learn: Data preprocessing
 - Pandas: Data manipulation
 
@@ -138,3 +147,4 @@ The application's denoising effectiveness depends on:
 ## Contributing
 
 Contributions are welcome! Please feel free to submit pull requests or open issues for any improvements or new features.
+
